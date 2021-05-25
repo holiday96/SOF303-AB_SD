@@ -16,6 +16,9 @@ import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
+import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JTable;
 
 public class OrganisationDetails extends JFrame {
 
@@ -36,6 +39,16 @@ public class OrganisationDetails extends JFrame {
 	private JTextField textField_13;
 	private JTextField textField_14;
 	private JTextField textField_15;
+	private JTextField textField_16;
+	private JTextField textField_17;
+	private JTextField textField_18;
+	private JTextField textField_19;
+	private JTextField textField_20;
+	private JTable table;
+	private DefaultTableModel modelDetal4 = new DefaultTableModel();
+	private DefaultTableModel modelDetal5 = new DefaultTableModel();
+
+	private JTable table_1;
 
 	/**
 	 * Launch the application.
@@ -321,6 +334,230 @@ public class OrganisationDetails extends JFrame {
 		tabbedPane.addTab("Details 2", null, panelDetail2, null);
 		panelDetail2.setLayout(null);
 		
+		JLabel lblOrganisation = new JLabel("<html><p>Organisation</p><p>Specicalism</p></html>");
+		lblOrganisation.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblOrganisation.setBounds(10, 11, 94, 40);
+		panelDetail2.add(lblOrganisation);
+		
+		JLabel lblService = new JLabel("<html><p>Service Disablities</p><p>Capabilities</p></html>");
+		lblService.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService.setBounds(10, 122, 116, 40);
+		panelDetail2.add(lblService);
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(159, 11, 275, 100);
+		panelDetail2.add(scrollPane_2);
+		
+		JScrollPane scrollPane_2_1 = new JScrollPane();
+		scrollPane_2_1.setBounds(159, 122, 275, 100);
+		panelDetail2.add(scrollPane_2_1);
+		
+		JScrollPane scrollPane_2_2 = new JScrollPane();
+		scrollPane_2_2.setBounds(159, 233, 275, 100);
+		panelDetail2.add(scrollPane_2_2);
+		
+		JScrollPane scrollPane_2_3 = new JScrollPane();
+		scrollPane_2_3.setBounds(159, 344, 275, 100);
+		panelDetail2.add(scrollPane_2_3);
+		
+		JScrollPane scrollPane_2_4 = new JScrollPane();
+		scrollPane_2_4.setBounds(615, 11, 282, 100);
+		panelDetail2.add(scrollPane_2_4);
+		
+		JScrollPane scrollPane_2_4_1 = new JScrollPane();
+		scrollPane_2_4_1.setBounds(615, 122, 282, 100);
+		panelDetail2.add(scrollPane_2_4_1);
+		
+		JScrollPane scrollPane_2_4_2 = new JScrollPane();
+		scrollPane_2_4_2.setBounds(615, 233, 282, 100);
+		panelDetail2.add(scrollPane_2_4_2);
+		
+		JLabel lblService_1 = new JLabel("<html><p>Service Barriers</p><p>Capabilities</p></html>");
+		lblService_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_1.setBounds(10, 233, 116, 40);
+		panelDetail2.add(lblService_1);
+		
+		JLabel lblService_2 = new JLabel("<html><p>Service Benefits</p><p>Capabilities</p></html>");
+		lblService_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_2.setBounds(10, 344, 116, 40);
+		panelDetail2.add(lblService_2);
+		
+		JLabel lblService_3 = new JLabel("<html><p>Service Personal</p><p>Circumstances</p><p>Capabilities</p></html>");
+		lblService_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_3.setBounds(453, 11, 116, 60);
+		panelDetail2.add(lblService_3);
+		
+		JLabel lblService_4 = new JLabel("<html><p>Service Ethinicity</p><p>Capabilities</p></html>");
+		lblService_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_4.setBounds(453, 122, 116, 40);
+		panelDetail2.add(lblService_4);
+		
+		JLabel lblService_5 = new JLabel("Accreditetion");
+		lblService_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_5.setBounds(453, 233, 116, 25);
+		panelDetail2.add(lblService_5);
+		
+		JPanel panel = new JPanel();
+		tabbedPane.addTab("Details 3", null, panel, null);
+		panel.setLayout(null);
+		
+		JLabel lblService_5_1 = new JLabel("EOI Programmes");
+		lblService_5_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_5_1.setBounds(10, 30, 116, 25);
+		panel.add(lblService_5_1);
+		
+		JScrollPane scrollPane_2_5 = new JScrollPane();
+		scrollPane_2_5.setBounds(186, 11, 275, 145);
+		panel.add(scrollPane_2_5);
+		
+		JScrollPane scrollPane_2_5_1 = new JScrollPane();
+		scrollPane_2_5_1.setBounds(186, 179, 275, 145);
+		panel.add(scrollPane_2_5_1);
+		
+		JLabel lblService_5_1_1 = new JLabel("EOI Services");
+		lblService_5_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblService_5_1_1.setBounds(10, 197, 116, 25);
+		panel.add(lblService_5_1_1);
+		
+		JPanel panel_1 = new JPanel();
+		tabbedPane.addTab("Details 4", null, panel_1, null);
+		panel_1.setLayout(null);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new TitledBorder(null, "Located In", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_3.setBounds(10, 275, 887, 170);
+		panel_1.add(panel_3);
+		panel_3.setLayout(null);
+		
+		textField_16 = new JTextField();
+		textField_16.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		textField_16.setColumns(10);
+		textField_16.setBounds(145, 132, 255, 25);
+		panel_3.add(textField_16);
+		
+		JLabel lblUnitary = new JLabel("Unitary uthority:");
+		lblUnitary.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblUnitary.setBounds(10, 131, 119, 25);
+		panel_3.add(lblUnitary);
+		
+		textField_17 = new JTextField();
+		textField_17.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		textField_17.setColumns(10);
+		textField_17.setBounds(145, 95, 255, 25);
+		panel_3.add(textField_17);
+		
+		textField_18 = new JTextField();
+		textField_18.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		textField_18.setColumns(10);
+		textField_18.setBounds(145, 59, 255, 25);
+		panel_3.add(textField_18);
+		
+		textField_19 = new JTextField();
+		textField_19.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		textField_19.setColumns(10);
+		textField_19.setBounds(145, 23, 255, 25);
+		panel_3.add(textField_19);
+		
+		JLabel lblLocalAuthority = new JLabel("Local Authority:");
+		lblLocalAuthority.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblLocalAuthority.setBounds(10, 95, 119, 25);
+		panel_3.add(lblLocalAuthority);
+		
+		JLabel lblBorough = new JLabel("Borough:");
+		lblBorough.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblBorough.setBounds(10, 59, 119, 25);
+		panel_3.add(lblBorough);
+		
+		JLabel lblWard = new JLabel("Ward:");
+		lblWard.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblWard.setBounds(10, 23, 119, 25);
+		panel_3.add(lblWard);
+		
+		JLabel lblNhsAuthority = new JLabel("NHS Authority:");
+		lblNhsAuthority.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNhsAuthority.setBounds(434, 22, 119, 25);
+		panel_3.add(lblNhsAuthority);
+		
+		JLabel lblWard_1_1 = new JLabel("Gov't Office Region:");
+		lblWard_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblWard_1_1.setBounds(434, 59, 133, 25);
+		panel_3.add(lblWard_1_1);
+		
+		JLabel lblWard_1_2 = new JLabel("Trust Region:");
+		lblWard_1_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblWard_1_2.setBounds(434, 95, 119, 25);
+		panel_3.add(lblWard_1_2);
+		
+		JLabel lblWard_1_3 = new JLabel("Trust District:");
+		lblWard_1_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblWard_1_3.setBounds(434, 132, 119, 25);
+		panel_3.add(lblWard_1_3);
+		
+		textField_20 = new JTextField();
+		textField_20.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		textField_20.setColumns(10);
+		textField_20.setBounds(577, 26, 289, 25);
+		panel_3.add(textField_20);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBounds(577, 60, 205, 25);
+		panel_3.add(comboBox_1);
+		
+		JComboBox comboBox_1_1 = new JComboBox();
+		comboBox_1_1.setBounds(577, 97, 205, 25);
+		panel_3.add(comboBox_1_1);
+		
+		JComboBox comboBox_1_2 = new JComboBox();
+		comboBox_1_2.setBounds(577, 132, 205, 25);
+		panel_3.add(comboBox_1_2);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBorder(new TitledBorder(null, "Premise", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_4.setBounds(10, 11, 887, 255);
+		panel_1.add(panel_4);
+		panel_4.setLayout(null);
+		
+		JScrollPane scrollPane_3 = new JScrollPane();
+		scrollPane_3.setBounds(10, 21, 867, 223);
+		panel_4.add(scrollPane_3);
+		
+		table = new JTable();
+		modelDetal4.addColumn("Premise Name");
+		modelDetal4.addColumn("Address");
+		modelDetal4.addColumn("Primary Location");
+		modelDetal4.addColumn("Phone Number");
+		modelDetal4.addColumn("");
+		table.setModel(modelDetal4);
+
+		scrollPane_3.setViewportView(table);
+		
+		JPanel panel_2 = new JPanel();
+		tabbedPane.addTab("Details 5", null, panel_2, null);
+		panel_2.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Current List of Supporting Materials");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNewLabel_1.setBounds(10, 11, 293, 25);
+		panel_2.add(lblNewLabel_1);
+		
+		JButton btnCreate = new JButton("Create");
+		btnCreate.setBounds(808, 13, 89, 23);
+		panel_2.add(btnCreate);
+		
+		JScrollPane scrollPane_4 = new JScrollPane();
+		scrollPane_4.setBounds(10, 47, 887, 398);
+		panel_2.add(scrollPane_4);
+		
+		table_1 = new JTable();
+		modelDetal5.addColumn("URL");
+		modelDetal5.addColumn("Description");
+		modelDetal5.addColumn("Type");
+		modelDetal5.addColumn("Added By");
+		modelDetal5.addColumn("Added Date");
+		modelDetal5.addColumn("");
+		table_1.setModel(modelDetal5);
+		scrollPane_4.setViewportView(table_1);
+		
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.setBounds(833, 30, 89, 23);
 		contentPane.add(btnNewButton);
@@ -328,5 +565,9 @@ public class OrganisationDetails extends JFrame {
 		JButton btnSave = new JButton("Save");
 		btnSave.setBounds(734, 30, 89, 23);
 		contentPane.add(btnSave);
+		
+		JButton btnInActive = new JButton("In-active");
+		btnInActive.setBounds(635, 30, 89, 23);
+		contentPane.add(btnInActive);
 	}
 }
