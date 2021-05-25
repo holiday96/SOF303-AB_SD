@@ -1,4 +1,4 @@
-package com.sof303.ui;
+package com.sof303.ui.organisation;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -196,9 +196,11 @@ public class OrganisationList extends JFrame {
 		lblNewLabel_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
 		JLabel lblPre = new JLabel("<");
+		lblPre.setEnabled(false);
 		lblPre.setFont(new Font("Tahoma", Font.BOLD, 13));
 		
 		JLabel lblFirst = new JLabel("|<");
+		lblFirst.setEnabled(false);
 		lblFirst.setFont(new Font("Tahoma", Font.BOLD, 13));
 		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 		gl_panel_2.setHorizontalGroup(
