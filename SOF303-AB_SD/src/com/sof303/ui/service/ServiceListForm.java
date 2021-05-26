@@ -1,4 +1,4 @@
-package com.sof303.ui;
+package com.sof303.ui.service;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -170,11 +170,11 @@ public class ServiceListForm extends javax.swing.JFrame {
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
 
         lblFirstPage.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblFirstPage.setIcon(new javax.swing.ImageIcon("images\\first-page-regular-24.png")); // NOI18N
+        lblFirstPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sof303/ui/images/first-page-regular-24.png"))); // NOI18N
         jPanel4.add(lblFirstPage);
 
         lblPrev.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblPrev.setIcon(new javax.swing.ImageIcon("images\\skip-previous-regular-24.png")); // NOI18N
+        lblPrev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sof303/ui/images/skip-previous-regular-24.png"))); // NOI18N
         jPanel4.add(lblPrev);
 
         jLabel19.setText(" | ");
@@ -197,11 +197,11 @@ public class ServiceListForm extends javax.swing.JFrame {
         jPanel4.add(jLabel23);
 
         lblNext.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblNext.setIcon(new javax.swing.ImageIcon("images\\skip-next-regular-24.png")); // NOI18N
+        lblNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sof303/ui/images/skip-next-regular-24.png"))); // NOI18N
         jPanel4.add(lblNext);
 
         lblLastPage.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblLastPage.setIcon(new javax.swing.ImageIcon("images\\last-page-regular-24.png")); // NOI18N
+        lblLastPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sof303/ui/images/last-page-regular-24.png"))); // NOI18N
         jPanel4.add(lblLastPage);
 
         tbServiceList.setModel(new javax.swing.table.DefaultTableModel(
