@@ -16,15 +16,13 @@ import com.sof303.mapper.RowMapper;
 
 public class AbstractDAO<T> implements GenericDAO<T> {
 
-	ResourceBundle resourceBundle = ResourceBundle.getBundle("db");
-
 	public Connection getConnection() {
 		
 		try {
-			Class.forName(resourceBundle.getString("driverName"));
-			String url = resourceBundle.getString("url");
-			String user = resourceBundle.getString("user");
-			String password = resourceBundle.getString("password");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/ab_sd";
+			String user = "abc";
+			String password = "abc";
 
 			return DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException | SQLException e) {

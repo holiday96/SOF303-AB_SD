@@ -23,7 +23,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-public class OrganisationList extends JFrame {
+public class OrganisationListFrame extends JFrame {
 
 	/**
 	 * 
@@ -50,7 +50,7 @@ public class OrganisationList extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					OrganisationList frame = new OrganisationList();
+					OrganisationListFrame frame = new OrganisationListFrame();
 					frame.setTitle("Organisation list");
 					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
@@ -64,7 +64,7 @@ public class OrganisationList extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public OrganisationList() {
+	public OrganisationListFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 986, 594);
 		contentPane = new JPanel();
@@ -271,19 +271,11 @@ public class OrganisationList extends JFrame {
 	
 	MouseListener clicker = new MouseListener() {
 		
-		@Override
 		public void mouseReleased(MouseEvent e) {}
-		
-		@Override
 		public void mousePressed(MouseEvent e) {}
-		
-		@Override
 		public void mouseExited(MouseEvent e) {}
-		
-		@Override
 		public void mouseEntered(MouseEvent e) {}
 		
-		@Override
 		public void mouseClicked(MouseEvent e) {
 			// TODO Auto-generated method stub
 			JLabel clickJLabel = (JLabel) e.getComponent();
