@@ -492,7 +492,7 @@ public class OrganisationDetails extends JFrame {
 		lblWard_1_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblWard_1_3.setBounds(434, 132, 119, 25);
 		panel_3.add(lblWard_1_3);
-		
+		// à quên chưa púh
 		textField_20 = new JTextField();
 		textField_20.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		textField_20.setColumns(10);
