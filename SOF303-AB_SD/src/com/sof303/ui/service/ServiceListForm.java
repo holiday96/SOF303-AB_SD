@@ -11,6 +11,8 @@ public class ServiceListForm extends javax.swing.JFrame {
 
     public ServiceListForm() {
         initComponents();
+        setLocationRelativeTo(this);
+        setTitle("Service List");
         tbServiceList.setModel(_modelTableServiceList = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
