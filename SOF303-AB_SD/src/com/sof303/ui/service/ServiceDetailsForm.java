@@ -1,5 +1,6 @@
 package com.sof303.ui.service;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class ServiceDetailsForm extends javax.swing.JFrame {
@@ -11,6 +12,9 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
     private DetailsFunding pnelDetailsFunding;
     private DetailsOrganisations pnelDetailsOrganisations;
     private DetailsPremises pnelDetailsPremises;
+    private JButton btnBack;
+    private JButton btnSave;
+    private JButton btnInActive;
 
     public ServiceDetailsForm() {
         initComponents();
@@ -54,6 +58,7 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
         jTabbedPane1.remove(pnelDetailsContact);
         jTabbedPane1.remove(pnelDetailsPremises);
         jTabbedPane1.remove(pnelDetailsFunding);
+        btnInActive.setVisible(false);
     }
 
     public static void main(String args[]) {
@@ -65,8 +70,19 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
+        btnBack = new JButton("Back");
+        btnBack.setBounds(933, 55, 89, 23);
+        this.add(btnBack);
+
+        btnSave = new JButton("Save");
+        btnSave.setBounds(834, 55, 89, 23);
+        this.add(btnSave);
+
+        btnInActive = new JButton("In-active");
+        btnInActive.setBounds(735, 55, 89, 23);
+        this.add(btnInActive);
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();

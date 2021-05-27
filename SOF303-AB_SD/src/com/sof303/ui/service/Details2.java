@@ -43,7 +43,7 @@ public class Details2 extends javax.swing.JPanel {
         jLabel53 = new javax.swing.JLabel();
         scroOtherServiceParticipation = new javax.swing.JScrollPane();
 
-        pnelDetails2.setLayout(new java.awt.GridLayout(1, 2));
+        pnelDetails2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel39.setText("Service Benefits Criterion");
@@ -81,33 +81,30 @@ public class Details2 extends javax.swing.JPanel {
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(scroServiceBenefitsCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(scroServiceBrriersCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel49)))
+                    .addComponent(scroServiceBrriersCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel49)
+                        .addGap(69, 69, 69)))
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scroServiceEthnicityCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(scroServiceEthnicityCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(76, 76, 76)
                         .addComponent(jLabel50)))
                 .addContainerGap(161, Short.MAX_VALUE))
         );
 
-        pnelDetails2.add(jPanel14);
+        pnelDetails2.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel51.setText("Service Disability Criterion");
 
         jLabel52.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel52.setText("<html><p>Service Personals</p><p>Circumstances Criterion</p></html>");
+        jLabel52.setText("Service Personal");
 
         jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel53.setText("<html><p>Other Service Participation</p><p>Criterion</p></html>");
+        jLabel53.setText("Service Ethnicity Criterion");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -136,24 +133,23 @@ public class Details2 extends javax.swing.JPanel {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(scroServiceDisabilityCriterion, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(scroServicePersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel52)))
+                    .addComponent(scroServicePersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                        .addComponent(jLabel52)
+                        .addGap(66, 66, 66)))
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(scroOtherServiceParticipation, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(74, 74, 74)
                         .addComponent(jLabel53)))
                 .addContainerGap(161, Short.MAX_VALUE))
         );
 
-        pnelDetails2.add(jPanel15);
+        pnelDetails2.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

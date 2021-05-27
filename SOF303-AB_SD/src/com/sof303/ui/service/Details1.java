@@ -80,7 +80,7 @@ public class Details1 extends javax.swing.JPanel {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
 
-        pnelDetails1.setLayout(new java.awt.GridLayout(1, 2));
+        pnelDetails1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Service Name *");
@@ -238,7 +238,7 @@ public class Details1 extends javax.swing.JPanel {
                 .addContainerGap(90, Short.MAX_VALUE))
         );
 
-        pnelDetails1.add(jPanel10);
+        pnelDetails1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Service Active");
@@ -395,7 +395,7 @@ public class Details1 extends javax.swing.JPanel {
                 .addContainerGap(88, Short.MAX_VALUE))
         );
 
-        pnelDetails1.add(jPanel11);
+        pnelDetails1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

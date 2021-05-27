@@ -1,5 +1,8 @@
 package com.sof303.ui.service;
 
+import com.sof303.service.IServiceService;
+import com.sof303.service.impl.ServiceService;
+
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,6 +11,7 @@ import java.awt.event.ActionListener;
 public class ServiceListForm extends javax.swing.JFrame {
 
     private DefaultTableModel _modelTableServiceList;
+    private IServiceService iServiceService = new ServiceService();
 
     public ServiceListForm() {
         initComponents();
@@ -28,6 +32,10 @@ public class ServiceListForm extends javax.swing.JFrame {
         for (String x : arrCol) {
             _modelTableServiceList.addColumn(x);
         }
+    }
+
+    private void loadTableData(){
+
     }
 
     private void setEventDetails() {
