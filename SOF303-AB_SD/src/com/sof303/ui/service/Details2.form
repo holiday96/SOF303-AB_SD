@@ -18,7 +18,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="1068" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="pnelDetails2" min="-2" pref="1068" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -30,7 +30,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <EmptySpace min="0" pref="624" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="pnelDetails2" min="-2" pref="624" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -61,9 +61,9 @@
                       </Group>
                       <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane14" alignment="0" pref="340" max="32767" attributes="0"/>
-                          <Component id="jScrollPane13" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jScrollPane12" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scroServiceEthnicityCriterion" alignment="0" pref="340" max="32767" attributes="0"/>
+                          <Component id="scroServiceBrriersCriterion" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scroServiceBenefitsCriterion" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -79,13 +79,13 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane12" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="scroServiceBenefitsCriterion" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane13" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="scroServiceBrriersCriterion" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -95,7 +95,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane14" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="scroServiceEthnicityCriterion" min="-2" pref="141" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
@@ -116,15 +116,15 @@
                 <Property name="text" type="java.lang.String" value="Service Benefits Criterion"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+            <Container class="javax.swing.JScrollPane" name="scroServiceBenefitsCriterion">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+            <Container class="javax.swing.JScrollPane" name="scroServiceBrriersCriterion">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane14">
+            <Container class="javax.swing.JScrollPane" name="scroServiceEthnicityCriterion">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>
@@ -160,9 +160,9 @@
                       </Group>
                       <EmptySpace pref="24" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane17" alignment="0" pref="340" max="32767" attributes="0"/>
-                          <Component id="jScrollPane16" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jScrollPane15" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scroOtherServiceParticipation" alignment="0" pref="340" max="32767" attributes="0"/>
+                          <Component id="scroServicePersonal" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scroServiceDisabilityCriterion" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -178,13 +178,13 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane15" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="scroServiceDisabilityCriterion" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane16" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="scroServicePersonal" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -194,7 +194,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jScrollPane17" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="scroOtherServiceParticipation" min="-2" pref="141" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
@@ -215,11 +215,11 @@
                 <Property name="text" type="java.lang.String" value="Service Disability Criterion"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane15">
+            <Container class="javax.swing.JScrollPane" name="scroServiceDisabilityCriterion">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane16">
+            <Container class="javax.swing.JScrollPane" name="scroServicePersonal">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>
@@ -239,7 +239,7 @@
                 <Property name="text" type="java.lang.String" value="Service Ethnicity Criterion"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane17">
+            <Container class="javax.swing.JScrollPane" name="scroOtherServiceParticipation">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
             </Container>

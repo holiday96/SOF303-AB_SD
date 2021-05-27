@@ -7,7 +7,7 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
     private Details1 pnelDetails1;
     private Details2 pnelDetails2;
     private Details3 pnelDetails3;
-    private DetailsContract pnelDetailsContract;
+    private DetailsContact pnelDetailsContact;
     private DetailsFunding pnelDetailsFunding;
     private DetailsOrganisations pnelDetailsOrganisations;
     private DetailsPremises pnelDetailsPremises;
@@ -32,26 +32,26 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
         pnelDetails1 = new Details1();
         pnelDetails2 = new Details2();
         pnelDetails3 = new Details3();
-        pnelDetailsContract = new DetailsContract();
+        pnelDetailsContact = new DetailsContact();
         pnelDetailsFunding = new DetailsFunding();
         pnelDetailsOrganisations = new DetailsOrganisations();
         pnelDetailsPremises = new DetailsPremises();
         pnelDetails1.setLayout(new java.awt.GridLayout(1, 2));
         pnelDetails2.setLayout(new java.awt.GridLayout(1, 2));
         pnelDetails3.setLayout(new java.awt.GridLayout(1, 2));
-        pnelDetailsContract.setLayout(new java.awt.GridLayout(1, 2));
+        pnelDetailsContact.setLayout(new java.awt.GridLayout(1, 2));
         pnelDetailsFunding.setLayout(new java.awt.GridLayout(1, 2));
         pnelDetailsOrganisations.setLayout(new java.awt.GridLayout(1, 2));
         pnelDetailsPremises.setLayout(new java.awt.GridLayout(1, 2));
         jTabbedPane1.addTab("Details 1", pnelDetails1);
         jTabbedPane1.addTab("Details 2", pnelDetails2);
         jTabbedPane1.addTab("Details 3", pnelDetails3);
-        jTabbedPane1.addTab("Contract", pnelDetailsContract);
+        jTabbedPane1.addTab("Contract", pnelDetailsContact);
         jTabbedPane1.addTab("Organisations", pnelDetailsOrganisations);
         jTabbedPane1.addTab("Premises", pnelDetailsPremises);
         jTabbedPane1.addTab("Funding", pnelDetailsFunding);
         jTabbedPane1.remove(pnelDetailsOrganisations);
-        jTabbedPane1.remove(pnelDetailsContract);
+        jTabbedPane1.remove(pnelDetailsContact);
         jTabbedPane1.remove(pnelDetailsPremises);
         jTabbedPane1.remove(pnelDetailsFunding);
     }
@@ -65,7 +65,7 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -139,5 +139,5 @@ public class ServiceDetailsForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
