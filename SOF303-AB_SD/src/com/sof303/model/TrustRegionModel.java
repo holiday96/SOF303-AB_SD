@@ -29,5 +29,4 @@ public class TrustRegionModel extends AbstractModel<TrustRegionModel> {
 	public void setCountryId(Integer countryId) {
 		this.countryId = countryId;
 	}
-
 }

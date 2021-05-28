@@ -39,7 +39,7 @@ public class MainFrame extends JFrame {
 	private JMenuItem mntmGovernmentOfficeRegionList;
 	private JMenuItem mntmGovernmentOfficeRegionView;
 	private JMenu mnPremises;
-	private JPanel pnlChild;
+	private static JPanel pnlChild;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -120,7 +120,7 @@ public class MainFrame extends JFrame {
 		pnlChild.add(lblWallpaper);
 	}
 
-	private void loadChild(JInternalFrame frame) {
+	public static void loadChild(JInternalFrame frame) {
 		try {
 			pnlChild.removeAll();
 
