@@ -1,12 +1,11 @@
 package com.sof303.service.impl;
 
+import java.util.List;
+
 import com.sof303.dao.IContactDAO;
 import com.sof303.dao.impl.ContactDAO;
 import com.sof303.model.ContactModel;
 import com.sof303.service.IContactService;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class ContactService implements IContactService {
 

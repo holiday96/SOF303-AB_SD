@@ -6,20 +6,19 @@ import com.sof303.dao.ITrustRegionDAO;
 import com.sof303.dao.impl.TrustRegionDAO;
 import com.sof303.model.TrustRegionModel;
 import com.sof303.service.ITrustRegionService;
-import com.sof303.sort.Sorter;
 
 public class TrustRegionService implements ITrustRegionService {
 
 	private ITrustRegionDAO trustRegionDAO = new TrustRegionDAO();
 
 	@Override
-	public List<TrustRegionModel> findByName(String name, Sorter sort) {
-		return trustRegionDAO.findByName(name, sort);
+	public List<TrustRegionModel> findByName(String name) {
+		return trustRegionDAO.findByName(name);
 	}
 
 	@Override
-	public List<TrustRegionModel> findAll(Sorter sort) {
-		return trustRegionDAO.findAll(sort);
+	public List<TrustRegionModel> findAll() {
+		return trustRegionDAO.findAll();
 	}
 
 	@Override

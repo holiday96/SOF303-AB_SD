@@ -6,6 +6,8 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -30,11 +32,7 @@ import com.sof303.service.ICountryService;
 import com.sof303.service.ITrustRegionService;
 import com.sof303.service.impl.CountryService;
 import com.sof303.service.impl.TrustRegionService;
-import com.sof303.sort.Sorter;
 import com.sof303.ui.MainFrame;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class TrustRegionListForm extends JInternalFrame {
 
@@ -140,7 +138,6 @@ public class TrustRegionListForm extends JInternalFrame {
 			"<html><b>Nation/Country</b></html>", "<html><b>Is Active?</b></html>", "" };
 	private int page;
 	private final int MAXPAGEITEM = 15;
-	private Sorter sort;
 	private DefaultTableModel model;
 	private List<TrustRegionModel> listParent;
 	private List<TrustRegionModel> listChild;
@@ -166,8 +163,7 @@ public class TrustRegionListForm extends JInternalFrame {
 	public TrustRegionListForm() {
 		initialize();
 
-		sort = new Sorter("trustregionid", "asc");
-		listParent = trustRegionService.findAll(sort);
+		listParent = trustRegionService.findAll();
 		totalItem = listParent.size();
 		totalPage = (int) Math.ceil((double) totalItem / MAXPAGEITEM);
 
@@ -647,9 +643,9 @@ public class TrustRegionListForm extends JInternalFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (label.getText().equals("All")) {
-					listParent = trustRegionService.findAll(sort);
+					listParent = trustRegionService.findAll();
 				} else {
-					listParent = trustRegionService.findByName(label.getText(), sort);
+					listParent = trustRegionService.findByName(label.getText());
 				}
 				totalItem = listParent.size();
 				totalPage = (int) Math.ceil((double) totalItem / MAXPAGEITEM);

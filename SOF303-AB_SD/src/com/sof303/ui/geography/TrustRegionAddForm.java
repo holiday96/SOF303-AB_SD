@@ -76,6 +76,7 @@ public class TrustRegionAddForm extends JInternalFrame {
 	}
 
 	private void initialize() {
+		((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 		setVisible(true);
 		setBounds(100, 100, 758, 501);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

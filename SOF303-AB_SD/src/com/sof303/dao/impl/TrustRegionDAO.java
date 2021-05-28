@@ -2,40 +2,27 @@ package com.sof303.dao.impl;
 
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.sof303.dao.ITrustRegionDAO;
 import com.sof303.mapper.TrustRegionMapper;
 import com.sof303.model.TrustRegionModel;
-import com.sof303.sort.Sorter;
 
 public class TrustRegionDAO extends AbstractDAO<TrustRegionModel> implements ITrustRegionDAO {
 
 	@Override
-	public List<TrustRegionModel> findAll(Sorter sort) {
+	public List<TrustRegionModel> findAll() {
 		StringBuilder sql = new StringBuilder("SELECT * FROM TRUSTREGION");
-		if (sort != null && StringUtils.isNotBlank(sort.getSortName()) && StringUtils.isNotBlank(sort.getSortBy())) {
-			sql.append(" ORDER BY " + sort.getSortName() + " " + sort.getSortBy() + "");
-		}
 		return query(sql.toString(), new TrustRegionMapper());
 	}
 
 	@Override
-	public List<TrustRegionModel> findByName(String name, Sorter sort) {
+	public List<TrustRegionModel> findByName(String name) {
 		StringBuilder sql = new StringBuilder("SELECT * FROM TRUSTREGION WHERE NAME");
 		if (name.equals("0 - 9")) {
 			name = "^[0-9]+";
 			sql.append(" REGEXP ?");
-			if (sort != null && StringUtils.isNotBlank(sort.getSortName()) && StringUtils.isNotBlank(sort.getSortBy())) {
-				sql.append(" ORDER BY " + sort.getSortName() + " " + sort.getSortBy() + "");
-			}
 			return query(sql.toString(), new TrustRegionMapper(), name);
-		} else {
-			sql.append(" LIKE ?");
-			if (sort != null && StringUtils.isNotBlank(sort.getSortName()) && StringUtils.isNotBlank(sort.getSortBy())) {
-				sql.append(" ORDER BY " + sort.getSortName() + " " + sort.getSortBy() + "");
-			}
 		}
+		sql.append(" LIKE ?");
 		return query(sql.toString(), new TrustRegionMapper(), name + "%");
 	}
 
