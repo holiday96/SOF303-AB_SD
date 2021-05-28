@@ -9,6 +9,8 @@ public interface ITrustRegionService {
 	TrustRegionModel findOne(Integer id);
 	List<TrustRegionModel> findByName(String name);
 	List<TrustRegionModel> findAll();
+	List<TrustRegionModel> findAllInclude();
+	List<TrustRegionModel> findByNameInclude(String name);
 	TrustRegionModel save(TrustRegionModel model);
 	TrustRegionModel update(TrustRegionModel updateTrustRegion);
 }

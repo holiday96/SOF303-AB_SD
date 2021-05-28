@@ -33,6 +33,7 @@ import com.sof303.service.ITrustRegionService;
 import com.sof303.service.impl.CountryService;
 import com.sof303.service.impl.TrustRegionService;
 import com.sof303.ui.MainFrame;
+import com.sof303.util.MessageUtil;
 
 public class TrustRegionListForm extends JInternalFrame {
 
@@ -441,6 +442,11 @@ public class TrustRegionListForm extends JInternalFrame {
 		pnlNav.add(horizontalStrut_35);
 
 		chkbInclude = new JCheckBox("Include In-active");
+		chkbInclude.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				includeInactive();
+			}
+		});
 		pnlNav.add(chkbInclude);
 
 		horizontalStrut_36 = Box.createHorizontalStrut(7);
@@ -473,6 +479,12 @@ public class TrustRegionListForm extends JInternalFrame {
 				return false;
 			};
 		};
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				tableClicked();
+			}
+		});
 		table.setAutoCreateRowSorter(true);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(table);
@@ -547,6 +559,37 @@ public class TrustRegionListForm extends JInternalFrame {
 
 		verticalStrut_3 = Box.createVerticalStrut(10);
 		pnlFooter.add(verticalStrut_3);
+	}
+
+	protected void tableClicked() {
+		int index = table.getSelectedRow();
+		if (listChild.get(index).getStatus() == 0) {
+			int input = MessageUtil.showConfirmMessage(this, "Do you want to make this Trust Region active?");
+			if (input == 0) {
+				TrustRegionModel trustRegionModel = listChild.get(index);
+				trustRegionModel.setStatus(1);
+				trustRegionModel.toString();
+				trustRegionService.update(trustRegionModel);
+				includeInactive();
+			}
+		}
+	}
+
+	protected void includeInactive() {
+		if (chkbInclude.isSelected()) {
+			listParent = trustRegionService.findAllInclude();
+		} else {
+			listParent = trustRegionService.findAll();
+		}
+		totalItem = listParent.size();
+		totalPage = (int) Math.ceil((double) totalItem / MAXPAGEITEM);
+
+		if (!listParent.isEmpty()) {
+			loadToTable(1);
+		} else {
+			loadToTable(0);
+		}
+		checkPosition();
 	}
 
 	protected void btnLast() {
@@ -642,10 +685,18 @@ public class TrustRegionListForm extends JInternalFrame {
 
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (label.getText().equals("All")) {
-					listParent = trustRegionService.findAll();
+				if (chkbInclude.isSelected()) {
+					if (label.getText().equals("All")) {
+						listParent = trustRegionService.findAllInclude();
+					} else {
+						listParent = trustRegionService.findByNameInclude(label.getText());
+					}
 				} else {
-					listParent = trustRegionService.findByName(label.getText());
+					if (label.getText().equals("All")) {
+						listParent = trustRegionService.findAll();
+					} else {
+						listParent = trustRegionService.findByName(label.getText());
+					}
 				}
 				totalItem = listParent.size();
 				totalPage = (int) Math.ceil((double) totalItem / MAXPAGEITEM);
@@ -673,7 +724,7 @@ public class TrustRegionListForm extends JInternalFrame {
 			try {
 				for (TrustRegionModel i : listChild) {
 					model.addRow(new Object[] { i.getName(), i.getDescription(),
-							countryService.findOne(i.getCountryId()).getName(), "", });
+							countryService.findOne(i.getCountryId()).getName(), (i.getStatus() == 1) ? "Yes" : "No", });
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

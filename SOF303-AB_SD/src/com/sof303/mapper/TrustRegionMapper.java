@@ -14,6 +14,7 @@ public class TrustRegionMapper implements RowMapper<TrustRegionModel>{
 			model.setId(rs.getInt("TRUSTREGIONID"));
 			model.setName(rs.getString("NAME"));
 			model.setDescription(rs.getString("DESCRIPTION"));
+			model.setStatus(rs.getInt("STATUS"));
 			model.setCountryId(rs.getInt("COUNTRYID"));
 			return model;
 		} catch (SQLException e) {

@@ -22,6 +22,16 @@ public class TrustRegionService implements ITrustRegionService {
 	}
 
 	@Override
+	public List<TrustRegionModel> findAllInclude() {
+		return trustRegionDAO.findAllInclude();
+	}
+
+	@Override
+	public List<TrustRegionModel> findByNameInclude(String name) {
+		return trustRegionDAO.findByNameInclude(name);
+	}
+
+	@Override
 	public TrustRegionModel save(TrustRegionModel model) {
 		Integer trustRegionId = trustRegionDAO.save(model);
 		return trustRegionDAO.findOne(trustRegionId);

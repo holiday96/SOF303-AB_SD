@@ -14,7 +14,7 @@ public class MessageUtil {
 		JOptionPane.showMessageDialog(component, message, "Success", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
-//	public static void showConfirmMessage(Component component, String message) {
-//		JOptionPane.showMessageDialog(component, message, "Confirm?", JOptionPane.YES_NO_OPTION);
-//	}
+	public static int showConfirmMessage(Component component, String message) {
+		return JOptionPane.showConfirmDialog(component, message, "Confirm?", JOptionPane.OK_CANCEL_OPTION);
+	}
 }
