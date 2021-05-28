@@ -477,6 +477,7 @@ public class TrustRegionListForm extends JInternalFrame {
 				return false;
 			};
 		};
+		table.setAutoCreateRowSorter(true);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(table);
 
@@ -675,7 +676,8 @@ public class TrustRegionListForm extends JInternalFrame {
 			}
 			try {
 				for (TrustRegionModel i : listChild) {
-					model.addRow(new Object[] { i.getName(), i.getDescription(), countryService.findOne(i.getCountryId()).getName() , "", });
+					model.addRow(new Object[] { i.getName(), i.getDescription(),
+							countryService.findOne(i.getCountryId()).getName(), "", });
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
