@@ -1,11 +1,9 @@
-package com.sof303.service;
+package com.sof303.dao;
 
 import com.sof303.model.ContactModel;
 
 import java.util.List;
 
-public interface IContactService {
+public interface IContactDAO extends GenericDAO<ContactModel> {
     List<ContactModel> findAll();
-
-    String getNameById(int id);
 }

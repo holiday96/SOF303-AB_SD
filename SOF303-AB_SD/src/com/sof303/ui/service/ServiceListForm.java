@@ -1,6 +1,8 @@
 package com.sof303.ui.service;
 
+import com.sof303.service.IContactService;
 import com.sof303.service.IServiceService;
+import com.sof303.service.impl.ContactService;
 import com.sof303.service.impl.ServiceService;
 
 import javax.swing.table.DefaultTableModel;
@@ -12,6 +14,7 @@ public class ServiceListForm extends javax.swing.JFrame {
 
     private DefaultTableModel _modelTableServiceList;
     private IServiceService iServiceService = new ServiceService();
+    private IContactService iContactService = new ContactService();
 
     public ServiceListForm() {
         initComponents();
@@ -24,6 +27,7 @@ public class ServiceListForm extends javax.swing.JFrame {
             }
         });
         setColumnsTable();
+        loadTableData();
         setEventDetails();
     }
 
@@ -35,7 +39,16 @@ public class ServiceListForm extends javax.swing.JFrame {
     }
 
     private void loadTableData(){
-
+        iServiceService.findAll().forEach(x -> {
+            _modelTableServiceList.addRow(new Object[]{
+                    "",
+                    "", // service name
+                    "", // Description
+                    "", // Service Type
+                    iContactService.getNameById(x.getIdContact()), // contact
+                    "" // Is Active
+            });
+        });
     }
 
     private void setEventDetails() {
